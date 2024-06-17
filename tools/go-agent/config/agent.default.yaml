@@ -30,6 +30,14 @@ agent:
   correlation:
     max_key_count: ${SW_AGENT_CORRELATION_MAX_KEY_COUNT:3}
     max_value_size: ${SW_AGENT_CORRELATION_MAX_VALUE_SIZE:128}
+  # If the suffix obtained by splitting the operation name by the last index of "." in this set, this segment should be ignored.(multiple split by ",").
+  ignore_suffix: ${SW_AGENT_IGNORE_SUFFIX:.jpg,.jpeg,.js,.css,.png,.bmp,.gif,.ico,.mp3,.mp4,.html,.svg}
+  # If the operation name of the first span is matching, this segment should be ignored.(multiple split by ",").
+  # Matching rules follow Ant Path match style, like /path/*, /path/**, /path/?.
+  #       "/path/*" means matching any path that starts with "/path/".  
+  #       "/path/**" means matching any path that starts with "/path/" and includes its subpaths.
+  #       "/path/?" means matching any path that starts with "/path/" and has any single character as a wildcard.
+  trace_ignore_path: ${SW_AGENT_TRACE_IGNORE_PATH:}
 
 reporter:
   discard: ${SW_AGENT_REPORTER_DISCARD:false}
@@ -95,3 +103,8 @@ plugin:
     redis:
       # Limit the bytes size of redis args request
       max_args_bytes: ${SW_AGENT_PLUGIN_CONFIG_REDIS_MAX_ARGS_BYTES:1024}
+    gin: 
+      # Collect the http header of gin request
+      collect_request_headers: ${SW_AGENT_PLUGIN_CONFIG_GIN_COLLECT_REQUEST_HEADERS:}
+      # Controlling the length limitation of all header values
+      header_length_threshold: ${SW_AGENT_PLUGIN_CONFIG_GIN_HEADER_LENGTH_THRESHOLD:2048}

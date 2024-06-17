@@ -23,6 +23,10 @@ use (
 	./plugins/fasthttp
 	./plugins/fiber
 	./plugins/echov4
+	./plugins/rocketmq
+	./plugins/amqp
+	./plugins/pulsar
+	./plugins/segmentio-kafka
 
 	./test/benchmark-codebase/consumer
 	./test/benchmark-codebase/provider
@@ -32,6 +36,7 @@ use (
 	// define the plugin test scenarios
 	./test/plugins/scenarios/dubbo
 	./test/plugins/scenarios/gin
+	./test/plugins/scenarios/short_versions_gin
 	./test/plugins/scenarios/http
 	./test/plugins/scenarios/go-redisv9
 	./test/plugins/scenarios/go-restfulv3
@@ -52,6 +57,10 @@ use (
 	./test/plugins/scenarios/plugin_exclusion
 	./test/plugins/scenarios/runtime_metrics
 	./test/plugins/scenarios/echov4
+	./test/plugins/scenarios/rocketmq
+	./test/plugins/scenarios/amqp
+	./test/plugins/scenarios/pulsar
+	./test/plugins/scenarios/segmentio-kafka
 
 	./tools/go-agent
 

@@ -23,6 +23,7 @@ type ToolsOperator interface {
 	ParseFloat(val string, bitSize int) (float64, error)
 	ParseBool(val string) bool
 	ParseInt(val string, base, bitSize int) (int64, error)
+	ParseStringArray(val string) ([]string, error)
 	Atoi(val string) (int, error)
 	NewSyncMap() interface{}
 }

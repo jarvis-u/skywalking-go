@@ -18,7 +18,7 @@ metrics based on the tracing data.
   * `dubbo`: [Dubbo](https://github.com/apache/dubbo-go) tested v3.0.1 to v3.0.5.
   * `kratosv2`: [Kratos](https://github.com/go-kratos/kratos) tested v2.3.1 to v2.6.2.
   * `microv4`: [Go-Micro](https://github.com/go-micro/go-micro) tested v4.6.0 to v4.10.2.
-  * `grpc` : [gRPC](https://github.com/grpc/grpc-go) tested v1.55.0 to v1.57.0.
+  * `grpc` : [gRPC](https://github.com/grpc/grpc-go) tested v1.55.0 to v1.64.0.
 * Database Client
   * `gorm`: [GORM](https://github.com/go-gorm/gorm) tested v1.22.0 to v1.25.1.
     * [MySQL Driver](https://github.com/go-gorm/mysql)
@@ -27,6 +27,11 @@ metrics based on the tracing data.
     * [MySQL Driver](https://github.com/go-sql-driver/mysql) tested v1.4.0 to v1.7.1.
 * Cache Client
   * `go-redisv9`: [go-redis](https://github.com/redis/go-redis) tested v9.0.3 to v9.0.5.
+* MQ Client
+  * `rocketMQ`: [rocketmq-client-go](https://github.com/apache/rocketmq-client-go) tested v2.1.2.
+  * `amqp`: [AMQP](https://github.com/rabbitmq/amqp091-go) tested v1.9.0.
+  * `pulsar`: [pulsar-client-go](https://github.com/apache/pulsar-client-go) tested v0.12.0.
+  * `segmentio-kafka`: [segmentio-kafka](https://github.com/segmentio/kafka-go) tested v0.4.47.
 
 # Metrics Plugins
 The meter plugin provides the advanced metrics collections.

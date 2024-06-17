@@ -19,6 +19,7 @@ package plugins
 
 import (
 	traceactivation "github.com/apache/skywalking-go/plugin/trace"
+	"github.com/apache/skywalking-go/plugins/amqp"
 	"github.com/apache/skywalking-go/plugins/core/instrument"
 	"github.com/apache/skywalking-go/plugins/dubbo"
 	"github.com/apache/skywalking-go/plugins/echov4"
@@ -37,7 +38,10 @@ import (
 	"github.com/apache/skywalking-go/plugins/microv4"
 	"github.com/apache/skywalking-go/plugins/mongo"
 	"github.com/apache/skywalking-go/plugins/mux"
+	"github.com/apache/skywalking-go/plugins/pulsar"
+	"github.com/apache/skywalking-go/plugins/rocketmq"
 	runtime_metrics "github.com/apache/skywalking-go/plugins/runtimemetrics"
+	segmentiokafka "github.com/apache/skywalking-go/plugins/segmentio-kafka"
 	sql_entry "github.com/apache/skywalking-go/plugins/sql/entry"
 	sql_mysql "github.com/apache/skywalking-go/plugins/sql/mysql"
 )
@@ -60,6 +64,10 @@ func init() {
 	registerFramework(irisv12.NewInstrument())
 	registerFramework(traceactivation.NewInstrument())
 	registerFramework(fiber.NewInstrument())
+	registerFramework(rocketmq.NewInstrument())
+	registerFramework(amqp.NewInstrument())
+	registerFramework(pulsar.NewInstrument())
+	registerFramework(segmentiokafka.NewInstrument())
 
 	// fasthttp related instruments
 	registerFramework(fasthttp_client.NewInstrument())

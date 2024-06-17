@@ -2,14 +2,33 @@ Changes by Version
 ==================
 Release Notes.
 
+0.5.0
+------------------
+#### Features
+* Add support trace ignore.
+
+#### Plugins
+* Support [Pulsar](https://github.com/apache/pulsar-client-go) MQ.
+* Support [Segmentio-Kafka](https://github.com/segmentio/kafka-go) MQ.
+* Support http headers collection for Gin
+* Support higher versions of grpc.
+
+#### Chore
+* Enhance the observability of makefile execution
+
 0.4.0
 ------------------
 #### Features
+* Add support ignore suffix for span name.
+* Adding go `1.21` and `1.22` in docker image.
 
 #### Plugins
 * Support setting a discard type of reporter.
 * Add `redis.max_args_bytes` parameter for redis plugin.
 * Changing intercept point for gin, make sure interfaces could be grouped when params defined in relativePath.
+* Support [RocketMQ](https://github.com/apache/rocketmq-client-go) MQ.
+* Support [AMQP](https://github.com/rabbitmq/amqp091-go) MQ.
+* support [Echov4](https://github.com/labstack/echo) framework.
 
 #### Documentation
 
@@ -20,6 +39,10 @@ Release Notes.
 * Fix ParseVendorModule error for special case in vendor/modules.txt.
 * Fix enhance method error when unknown parameter type.
 * Fix wrong tracing context when trace have been sampled.
+* Fix enhance param error when there are multiple params.
+* Fix lost trace when multi middleware `handlerFunc` in `gin` plugin.
+* Fix DBQueryContext execute error in `sql` plugin.
+* Fix stack overflow as endless logs triggered.
 
 #### Issues and PR
 - All issues are [here](https://github.com/apache/skywalking/milestone/197?closed=1)
@@ -36,7 +59,6 @@ Release Notes.
 * Support [iris](https://github.com/kataras/iris) framework.
 * Support [fasthttp](https://github.com/valyala/fasthttp) framework.
 * Support [fiber](https://github.com/gofiber/fiber) framework.
-* support [Echov4](https://github.com/labstack/echo) framework.
 
 #### Documentation
 * Add `Tracing APIs` document into `Manual APIs`.
@@ -84,7 +106,6 @@ Release Notes.
 
 0.1.0
 ------------------
-
 #### Features
 * Initialize the agent core and user import library.
 * Support gRPC reporter for management, tracing protocols.
@@ -98,7 +119,7 @@ Release Notes.
 * Support [Kratos](github.com/go-kratos/kratos) v2 server and client framework.
 * Support [Go-Micro](https://github.com/go-micro/go-micro) v4 server and client framework.
 * Support [GORM](https://github.com/go-gorm/gorm) v2 database client framework.
-  * Support [MySQL Driver](https://github.com/go-gorm/mysql) detection.
+* Support [MySQL Driver](https://github.com/go-gorm/mysql) detection.
 
 #### Documentation
 * Initialize the documentation.
