@@ -17,8 +17,6 @@
 # limitations under the License.
 
 home="$(cd "$(dirname $0)"; pwd)"
-go build ${GO_BUILD_OPTS} -o gorm
+go build ${GO_BUILD_OPTS} -o go-elasticsearchv8
 
-export SW_AGENT_PLUGIN_CONFIG_GORM_COLLECT_PARAMETER=true
-
-./gorm
+./go-elasticsearchv8

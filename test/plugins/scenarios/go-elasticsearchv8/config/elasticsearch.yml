@@ -1,5 +1,3 @@
-#!/bin/bash
-#
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -16,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-home="$(cd "$(dirname $0)"; pwd)"
-go build ${GO_BUILD_OPTS} -o gorm
-
-export SW_AGENT_PLUGIN_CONFIG_GORM_COLLECT_PARAMETER=true
-
-./gorm
+cluster.name: "sw-es-cluster"
+discovery.type: "single-node"
+network.host: 0.0.0.0
+ingest.geoip.downloader.enabled: false
+xpack.security.enabled: false
+xpack.security.enrollment.enabled: false

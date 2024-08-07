@@ -6,15 +6,21 @@ Release Notes.
 ------------------
 #### Features
 * Add support trace ignore.
+* Enhance the observability of makefile execution.
+* Update the error message if the peer address is empty when creating exit span.
 
 #### Plugins
 * Support [Pulsar](https://github.com/apache/pulsar-client-go) MQ.
 * Support [Segmentio-Kafka](https://github.com/segmentio/kafka-go) MQ.
-* Support http headers collection for Gin
+* Support http headers collection for Gin.
 * Support higher versions of grpc.
+* Support [go-elasticsearchv8](https://github.com/elastic/go-elasticsearch) database client framework.
+* Support `http.Hijacker` interface for mux plugin.
+* Support collect statements and parameters in the Gorm plugin. 
 
-#### Chore
-* Enhance the observability of makefile execution
+### Bug Fixes
+* Fix panic error when root span finished.
+* Fix when not route is found, the gin operation name is "http.Method:", example: "GET:".
 
 0.4.0
 ------------------
