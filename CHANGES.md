@@ -4,10 +4,14 @@ Release Notes.
 
 0.5.0
 ------------------
+* **Add go `1.23` support**.
+* **Remove go `1.16`, `1.17`, and `1.18` support**.
+
 #### Features
 * Add support trace ignore.
 * Enhance the observability of makefile execution.
-* Update the error message if the peer address is empty when creating exit span.
+* Update the error message if the peer address is empty when creating an exit span.
+* Support enhancement go `1.23`.
 
 #### Plugins
 * Support [Pulsar](https://github.com/apache/pulsar-client-go) MQ.
@@ -21,6 +25,7 @@ Release Notes.
 ### Bug Fixes
 * Fix panic error when root span finished.
 * Fix when not route is found, the gin operation name is "http.Method:", example: "GET:".
+* Fix got `span type is wrong` error when creating exit span with trace sampling. 
 
 0.4.0
 ------------------
